@@ -36,7 +36,7 @@
                     <div class="nav__menu-box">
                         <ul>
                             <li><a href="#services__section">Услуги</a></li>
-                            <li><a href="#property__valuation">Оценка недвижимости</a></li>
+                            <li><a href="#calculate">Оценка недвижимости</a></li>
                             <li><a href="#about__section">О нас</a></li>
                             <li><a href="#contacts__section">Контакты</a></li>
                         </ul>
@@ -116,12 +116,9 @@
                     <div class="title">Полезные материалы</div>
                     <div class="footer__menu">
                         <ul>
-                            <li><a href="#about__section">О нас</a></li>
                             <li><a href="#services__section">Услуги</a></li>
-                            <li><a href="#our__works-section">Наши работы</a></li>
-                            @foreach($galleries as $gallery)
-                                <li><a href="#gallery__{{ $gallery->id }}">{{ $gallery->name }}</a></li>
-                            @endforeach
+                            <li><a href="#calculate">Оценка недвижимости</a></li>
+                            <li><a href="#about__section">О нас</a></li>
                             <li><a href="#contacts__section">Контакты</a></li>
                         </ul>
                     </div>
@@ -162,12 +159,10 @@
 
     <div class="mobile__menu">
         <ul>
-            <li><a href="#about__section">О нас</a></li>
             <li><a href="#services__section">Услуги</a></li>
-            <li><a href="#our__works-section">Наши работы</a></li>
-            <li><a href="#action__section">Акции</a></li>
-            <li><a href="#guest__section">Отзывы</a></li>
-            <li><a href="#faq__section">FAQ</a></li>
+            <li><a href="#calculate">Оценка недвижимости</a></li>
+            <li><a href="#about__section">О нас</a></li>
+            <li><a href="#contacts__section">Контакты</a></li>
         </ul>
         <div class="socials">
             @include('layouts.partials.socials')

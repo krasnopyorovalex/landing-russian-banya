@@ -16,9 +16,9 @@ Route::pattern('alias', '[\da-z-]+');
 Auth::routes();
 
 Route::post('send-callback', 'FormHandlerController@callback')->name('send.callback');
-Route::post('send-consultation', 'FormHandlerController@consultation')->name('send.consultation');
+Route::post('send-calculate', 'FormHandlerController@calculate')->name('send.calculate');
 
-Route::group(['middleware' => ['redirector']], function () {
+Route::group(['middleware' => ['redirector']], static function () {
 
     Route::get('{alias?}/{page?}', 'PageController@show')->name('page.show')->where('page', '[0-9]+');
 
@@ -28,7 +28,7 @@ Route::group(['middleware' => ['redirector']], function () {
 
 });
 
-Route::group(['prefix' => '_root', 'middleware' => 'auth', 'namespace' => 'Admin', 'as' => 'admin.'], function () {
+Route::group(['prefix' => '_root', 'middleware' => 'auth', 'namespace' => 'Admin', 'as' => 'admin.'], static function () {
 
     Route::get('', 'HomeController@home')->name('home');
 

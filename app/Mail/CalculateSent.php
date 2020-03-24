@@ -7,10 +7,10 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
 /**
- * Class ConsultationSent
+ * Class CalculateSent
  * @package App\Mail
  */
-class ConsultationSent extends Mailable
+class CalculateSent extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -26,13 +26,13 @@ class ConsultationSent extends Mailable
     }
 
     /**
-     * @return ConsultationSent
+     * @return CalculateSent
      */
-    public function build()
+    public function build(): CalculateSent
     {
         return $this->from('stilniydom.simf@yandex.ru')
-            ->subject('Форма: Заказать консультацию')
-            ->view('emails.consultation', [
+            ->subject('Форма: оценка стоимости недвижимости')
+            ->view('emails.calculate', [
                 'data' => $this->data
             ]);
     }

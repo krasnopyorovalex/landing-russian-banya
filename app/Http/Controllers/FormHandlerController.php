@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Forms\CallbackRequest;
-use App\Http\Requests\Forms\ConsultationRequest;
+use App\Http\Requests\Forms\CalculateRequest;
 use App\Mail\CallbackSent;
-use App\Mail\ConsultationSent;
+use App\Mail\CalculateSent;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
@@ -34,12 +34,12 @@ class FormHandlerController extends Controller
     }
 
     /**
-     * @param CallbackRequest $request
+     * @param CalculateRequest $request
      * @return array
      */
-    public function consultation(ConsultationRequest $request): array
+    public function calculate(CalculateRequest $request): array
     {
-        Mail::to([$this->to])->send(new ConsultationSent($request->all()));
+        Mail::to([$this->to])->send(new CalculateSent($request->all()));
 
         return [
             'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время',
