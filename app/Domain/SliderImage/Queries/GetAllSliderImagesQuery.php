@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Gallery\Queries;
+namespace App\Domain\SliderImage\Queries;
 
 use App\Slider;
 

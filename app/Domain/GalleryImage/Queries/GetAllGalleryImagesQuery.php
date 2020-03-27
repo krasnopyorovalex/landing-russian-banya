@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Gallery\Queries;
+namespace App\Domain\GalleryImage\Queries;
 
 use App\Gallery;
 
