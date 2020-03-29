@@ -102,7 +102,7 @@
                             <svg class="icon">
                                 <use xlink:href="{{ asset('img/symbols.svg#email') }}"></use>
                             </svg>
-                            <a href="mailto:stilnyidom@list.ru">stilnyidom@list.ru</a>
+                            <a href="mailto:bim.director.crimea@gmail.com">bim.director.crimea@gmail.com</a>
                         </div>
                         <div>
                             <svg class="icon icon__address">
