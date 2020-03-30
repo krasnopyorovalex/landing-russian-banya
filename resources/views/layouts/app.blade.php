@@ -137,7 +137,7 @@
             </div>
             <div class="row flex-center">
                 <div class="col-6">
-                    <div class="copyright">© {{ date('Y') }} Стильный дом. Все права защищены.</div>
+                    <div class="copyright">© {{ date('Y') }} Банк недвижимости. Все права защищены.</div>
                 </div>
                 <div class="col-6">
                     <div class="develop">
