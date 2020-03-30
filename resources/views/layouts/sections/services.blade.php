@@ -6,8 +6,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-                <div class="owl-carousel owl-theme default__slider">
+            <div class="row col-12">
+                <div class="col-12 owl-carousel owl-theme default__slider">
                     @foreach($services as $service)
                     <div>
                         @if ($service->image)
