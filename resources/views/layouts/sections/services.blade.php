@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="title">Услуги</div>
+                <div class="title">Наши услуги</div>
             </div>
         </div>
         <div class="row">

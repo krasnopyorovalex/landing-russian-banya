@@ -15,6 +15,7 @@ Route::pattern('alias', '[\da-z-]+');
 
 Auth::routes();
 
+Route::post('send-recall', 'FormHandlerController@recall')->name('send.recall');
 Route::post('send-callback', 'FormHandlerController@callback')->name('send.callback');
 Route::post('send-calculate', 'FormHandlerController@calculate')->name('send.calculate');
 

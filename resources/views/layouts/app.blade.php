@@ -11,6 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="theme-color" content="#eee">
     @stack('og')
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.min.css') }}"/>
     <link href="{{ asset('favicon.ico') }}" rel="shortcut icon" type="image/x-icon" />
     <link rel="canonical" href="@yield('canonical', request()->url())"/>
@@ -54,7 +55,7 @@
 
                         </div>
                         <div class="btn btn__booking call__popup" data-target="popup__recall">
-                            Написать
+                            Заказать звонок
                         </div>
                         <div class="burger-mob">
                             <span></span>
@@ -71,12 +72,15 @@
                 <div class="col-7">
                     <div class="intro__text">
                         <div class="title">
-                            Честный срочный выкуп любой недвижимости в Крыму
+                            <div>Честный</div>
+                            <div class="bold">Срочный выкуп </div>
+                            <div>недвижимости в Крыму</div>
                         </div>
                         <div class="sub__title">
-                            Ваш надежный партнер в аренде и продаже. Более 8 лет на рынке
+                            <div>Более 8 лет на рынке недвижимости Крыма</div>
+                            <div>Более 1000 сделок купли-продажи</div>
                         </div>
-                        <div class="btn call__popup" data-target="popup__recall">Отправить заявку</div>
+                        <div class="btn call__popup" data-target="popup__callback">Отправить заявку</div>
                     </div>
                 </div>
                 <div class="col-5"></div>
@@ -175,7 +179,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    @include('layouts.forms.callback',['unique' => 'popup'])
+                    @include('layouts.forms.recall')
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup__callback">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    @include('layouts.forms.callback')
                 </div>
             </div>
         </div>

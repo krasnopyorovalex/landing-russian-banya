@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-8">
+            <div class="col-12">
                 <ul class="faq">
                     @foreach($faqs as $faq)
                         <li>

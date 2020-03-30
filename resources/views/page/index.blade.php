@@ -78,6 +78,8 @@
 
         @includeWhen(count($abouts), 'layouts.sections.about')
 
+        @includeWhen(count($abouts), 'layouts.sections.faqs')
+
         <section class="map__section" id="contacts__section">
             <div class="container">
                 <div class="row">

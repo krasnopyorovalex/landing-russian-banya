@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Forms\CallbackRequest;
 use App\Http\Requests\Forms\CalculateRequest;
+use App\Http\Requests\Forms\RecallRequest;
 use App\Mail\CallbackSent;
 use App\Mail\CalculateSent;
+use App\Mail\RecallSent;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
@@ -26,6 +28,20 @@ class FormHandlerController extends Controller
     public function callback(CallbackRequest $request): array
     {
         Mail::to([$this->to])->send(new CallbackSent($request->all()));
+
+        return [
+            'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время',
+            'status' => 200
+        ];
+    }
+
+    /**
+     * @param RecallRequest $request
+     * @return array
+     */
+    public function recall(RecallRequest $request): array
+    {
+        Mail::to([$this->to])->send(new RecallSent($request->all()));
 
         return [
             'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время',
