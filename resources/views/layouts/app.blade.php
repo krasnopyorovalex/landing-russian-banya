@@ -116,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-5">
+                <div class="col-4">
                     <div class="title">Полезные материалы</div>
                     <div class="footer__menu">
                         <ul>
@@ -127,7 +127,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-3">
                     <div class="title right">Мы в соцсетях</div>
                     <div class="footer__socials">
                         @include('layouts.partials.socials')
