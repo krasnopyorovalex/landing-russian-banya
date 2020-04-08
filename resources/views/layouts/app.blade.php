@@ -29,7 +29,7 @@
                 <div class="col-3">
                     <div class="logo">
                         <a href="{{ route('page.show') }}">
-                            <img src="{{ asset('img/logo.svg') }}" alt="Быстрый выкуп недвижимости" title="Быстрый выкуп любой недвижимости в Крыму">
+                            <img src="{{ asset('img/logo.png') }}" alt="Быстрый выкуп недвижимости" title="Быстрый выкуп любой недвижимости в Крыму">
                         </a>
                     </div>
                 </div>
