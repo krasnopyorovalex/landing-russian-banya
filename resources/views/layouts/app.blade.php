@@ -53,7 +53,7 @@
                             </a>
 
                         </div>
-                        <div class="btn btn__booking btn-scroll" data-target="contacts__section">
+                        <div class="btn btn__booking call__popup" data-target="popup__recall">
                             Заказать звонок
                         </div>
                         <div class="burger-mob">
@@ -80,7 +80,7 @@
                             <div>Более 1000 сделок купли-продажи</div>
                         </div>
                         <div class="h-btn-box">
-                            <div class="btn btn-scroll" data-target="contacts__section">Отправить заявку</div>
+                            <div class="btn btn-scroll" data-target="calculate">Отправить заявку</div>
                         </div>
                     </div>
                 </div>
