@@ -6,11 +6,6 @@
 
 @section('content')
 
-    <a href="{{ route('admin.pages.create') }}" type="button" class="btn bg-primary">
-        Добавить
-        <i class="icon-stack-plus position-right"></i>
-    </a>
-
     <div class="table-responsive">
         <table class="table">
             <thead>

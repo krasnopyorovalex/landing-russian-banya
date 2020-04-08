@@ -10,7 +10,6 @@
     <meta name="google" content="notranslate">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="theme-color" content="#eee">
-    @stack('og')
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.min.css') }}"/>
     <link href="{{ asset('favicon.ico') }}" rel="shortcut icon" type="image/x-icon" />
@@ -54,7 +53,7 @@
                             </a>
 
                         </div>
-                        <div class="btn btn__booking call__popup" data-target="popup__recall">
+                        <div class="btn btn__booking btn-scroll" data-target="contacts__section">
                             Заказать звонок
                         </div>
                         <div class="burger-mob">
@@ -81,7 +80,7 @@
                             <div>Более 1000 сделок купли-продажи</div>
                         </div>
                         <div class="h-btn-box">
-                            <div class="btn call__popup" data-target="popup__callback">Отправить заявку</div>
+                            <div class="btn btn-scroll" data-target="contacts__section">Отправить заявку</div>
                         </div>
                     </div>
                 </div>
@@ -141,22 +140,8 @@
                 </div>
             </div>
             <div class="row flex-center">
-                <div class="col-6">
+                <div class="col-12">
                     <div class="copyright">© {{ date('Y') }} Банк недвижимости. Все права защищены.</div>
-                </div>
-                <div class="col-6">
-                    <div class="develop">
-                        <div class="develop__link">
-                            <a href="https://krasber.ru" target="_blank" rel="nofollow">
-                                Создание, продвижение и <br/>техподдержка сайтов
-                            </a>
-                        </div>
-                        <div class="develop__logo">
-                            <a href="https://krasber.ru" target="_blank" rel="nofollow">
-                                <img src="{{ asset('img/krasber.svg') }}" alt="Веб-студия Красбер">
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
