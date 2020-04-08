@@ -73,7 +73,7 @@
                     <div class="intro__text">
                         <div class="title">
                             <div>Честный</div>
-                            <div class="bold">Срочный выкуп </div>
+                            <div class="bold">срочный выкуп</div>
                             <div>недвижимости в Крыму</div>
                         </div>
                         <div class="sub__title">
