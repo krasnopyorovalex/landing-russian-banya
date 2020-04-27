@@ -20,7 +20,7 @@ class FormHandlerController extends Controller
     use DispatchesJobs;
 
     //private $to = 'bim.director.crimea@gmail.com';
-    private $to = 'djShtaket88@mail.com';
+    private $to = 'djShtaket88@mail.ru';
 
     /**
      * @param CallbackRequest $request
