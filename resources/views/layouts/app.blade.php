@@ -104,6 +104,12 @@
                         </div>
                         <div>
                             <svg class="icon">
+                                <use xlink:href="{{ asset('img/symbols.svg#phone') }}"></use>
+                            </svg>
+                            <a href="tel:+79785069240">+7 (978) 506-92-40</a>
+                        </div>
+                        <div>
+                            <svg class="icon">
                                 <use xlink:href="{{ asset('img/symbols.svg#email') }}"></use>
                             </svg>
                             <a href="mailto:bim.director.crimea@gmail.com">bim.director.crimea@gmail.com</a>
