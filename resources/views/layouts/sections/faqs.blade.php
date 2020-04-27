@@ -1,3 +1,4 @@
+@if(count($abouts))
 <section id="faq__section" class="faq__section">
     <div class="container">
         <div class="row">
@@ -21,3 +22,4 @@
         </div>
     </div>
 </section>
+@endif
