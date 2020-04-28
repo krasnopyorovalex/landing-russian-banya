@@ -100,13 +100,19 @@
                             <svg class="icon">
                                 <use xlink:href="{{ asset('img/symbols.svg#phone') }}"></use>
                             </svg>
-                            <a href="tel:+79780141515">+7 (978) 014-15-15</a>
+                            <a href="tel:+79780141515">+7 (978) 014-15-15 - офис-менеджер</a>
                         </div>
                         <div>
                             <svg class="icon">
                                 <use xlink:href="{{ asset('img/symbols.svg#phone') }}"></use>
                             </svg>
-                            <a href="tel:+79785069240">+7 (978) 506-92-40</a>
+                            <a href="tel:+79785069240">+7 (978) 506-92-40 - срочный выкуп</a>
+                        </div>
+                        <div>
+                            <svg class="icon">
+                                <use xlink:href="{{ asset('img/symbols.svg#phone') }}"></use>
+                            </svg>
+                            <a href="tel:+79787714950">+7 (978) 771-49-50 - директор</a>
                         </div>
                         <div>
                             <svg class="icon">
