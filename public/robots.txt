@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /
+Host: https://xn--80abeheinban2aebv9bq.xn--p1ai/
