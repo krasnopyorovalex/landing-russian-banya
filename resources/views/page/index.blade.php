@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="calculate-form">
-                            <form action="{{ route('send.calculate') }}" method="post" id="calculate-form">
+                            <form action="{{ route('send.calculate') }}" method="post" id="calculate-form" onsubmit="yaCounter62689138.reachGoal('RASCHET_CENY'); return true">
                                 @csrf
                                 <div class="single__block">
                                     <label for="estate-type">Тип недвижимости</label>

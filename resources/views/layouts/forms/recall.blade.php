@@ -1,4 +1,4 @@
-<form action="{{ route('send.recall') }}" class="form__order" id="form__recall" method="post">
+<form action="{{ route('send.recall') }}" class="form__order" id="form__recall" method="post" onsubmit="yaCounter62689138.reachGoal('VOPROS'); return true">
     @csrf
     <div class="close__box" title="Закрыть форму">
         <div class="close"></div>

@@ -1,4 +1,4 @@
-<form action="{{ route('send.callback') }}" class="form__order" id="form__callback" method="post">
+<form action="{{ route('send.callback') }}" class="form__order" id="form__callback" method="post" onsubmit="yaCounter62689138.reachGoal('ZAKAZ_ZVONKA'); return true">
     @csrf
     <div class="close__box" title="Закрыть форму">
         <div class="close"></div>
