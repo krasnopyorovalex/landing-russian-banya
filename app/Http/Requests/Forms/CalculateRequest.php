@@ -18,7 +18,7 @@ class CalculateRequest extends Request
             'address' => ['required', 'string', new NotUrl()],
             'square' => ['required', 'string', new NotUrl()],
             'cost' => ['required', 'string', new NotUrl()],
-            'name' => ['required', 'string', 'min:2', new NotUrl()],
+            'name' => ['required', 'string', 'min:2', 'regex:/[А-Яа-яЁё]/u', new NotUrl()],
             'phone' => ['required', 'string']
         ];
     }

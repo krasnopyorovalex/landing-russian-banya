@@ -13,7 +13,7 @@ class CallbackRequest extends Request
     public function rules(): array
     {
         return [
-            'fio' => 'required|string|min:2',
+            'fio' => 'required|string|min:2|regex:/[А-Яа-яЁё]/u',
             'phone' => 'required|string',
             'email' => 'required|email',
             'message' => 'string|nullable'
