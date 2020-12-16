@@ -45,11 +45,11 @@
                 <div class="col-4">
                     <div class="right flex__box">
                         <div class="phone">
-                            <a href="tel:+79780141515">
+                            <a href="tel:+79785069240">
                                 <svg class="icon">
                                     <use xlink:href="{{ asset('img/symbols.svg#phone_mob') }}"></use>
                                 </svg>
-                                +7 (978) 014-15-15
+                                +7 (978) 506-92-40
                             </a>
 
                         </div>
@@ -96,12 +96,12 @@
                 <div class="col-5">
                     <div class="title">Наши контакты</div>
                     <div class="footer__contacts">
-                        <div>
-                            <svg class="icon">
-                                <use xlink:href="{{ asset('img/symbols.svg#phone') }}"></use>
-                            </svg>
-                            <a href="tel:+79780141515">+7 (978) 014-15-15 - офис-менеджер</a>
-                        </div>
+{{--                        <div>--}}
+{{--                            <svg class="icon">--}}
+{{--                                <use xlink:href="{{ asset('img/symbols.svg#phone') }}"></use>--}}
+{{--                            </svg>--}}
+{{--                            <a href="tel:+79780141515">+7 (978) 014-15-15 - офис-менеджер</a>--}}
+{{--                        </div>--}}
                         <div>
                             <svg class="icon">
                                 <use xlink:href="{{ asset('img/symbols.svg#phone') }}"></use>
