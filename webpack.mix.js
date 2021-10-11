@@ -18,4 +18,5 @@ mix.scripts([
         'resources/js/_owl.carousel.min.js',
         'resources/js/app.js',
     ], 'public/js/app.min.js')
+    .sass('resources/sass/style.scss', 'public/css')
     .version();

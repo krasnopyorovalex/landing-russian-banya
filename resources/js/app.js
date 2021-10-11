@@ -7,9 +7,9 @@ jQuery(document).ready(function() {
         };
     });
 
-    var burgerMob = jQuery(".burger-mob");
+    const burgerMob = jQuery(".burger-mob");
     if(burgerMob.length) {
-        var mobileMenu = jQuery(".mobile__menu"),
+        const mobileMenu = jQuery(".mobile__menu"),
             closeMenuBtn = jQuery(".close-menu-btn");
         burgerMob.on("click", function () {
             return mobileMenu.addClass("is__opened") && mobileMenu.fadeIn("fast");
@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
         });
         mobileMenu.on("click", ".has__child > span", function (e) {
             e.preventDefault();
-            var _this = jQuery(this);
+            const _this = jQuery(this);
             if( _this.next('ul').is(':hidden') ) {
                 _this.next('ul').slideDown();
             } else {
@@ -29,9 +29,9 @@ jQuery(document).ready(function() {
         });
     }
 
-    var stickyMenu = jQuery("#nav__menu");
+    const stickyMenu = jQuery("#nav__menu");
     if(stickyMenu.length) {
-        var header = jQuery("header"),
+        const header = jQuery("header"),
             height = header.height();
         jQuery(window).scroll(function(){
             if (window.pageYOffset >= height) {
@@ -41,12 +41,12 @@ jQuery(document).ready(function() {
         });
     }
 
-    var maskPhone = jQuery("form input.phone__mask");
+    const maskPhone = jQuery("form input.phone__mask");
     if (maskPhone.length) {
         maskPhone.mask('+0 (000) 000-00-00', {placeholder: "+_ (___) ___-__-__"});
     }
 
-    var portfolio = jQuery('.default__slider');
+    const portfolio = jQuery('.default__slider');
     if (portfolio.length) {
         portfolio.owlCarousel({
             loop:false,
@@ -69,10 +69,10 @@ jQuery(document).ready(function() {
         });
     }
 
-    var faq = jQuery(".faq");
+    const faq = jQuery(".faq");
     if(faq.length) {
         faq.on("click", "li .q", function () {
-            var _this = jQuery(this),
+            const _this = jQuery(this),
                 parent = _this.parent("li");
             faq.find(".a").hide();
             if(parent.hasClass("active")) {
@@ -82,11 +82,11 @@ jQuery(document).ready(function() {
         });
     }
 
-    var headerMenu = jQuery("#nav__menu,.mobile__menu,.footer__menu");
+    const headerMenu = jQuery("#nav__menu,.mobile__menu,.footer__menu");
     if(headerMenu.length) {
         headerMenu.on("click", "li > a", function (e) {
             e.preventDefault();
-            var _this = jQuery(this),
+            const _this = jQuery(this),
                 scrollTo = _this.attr("href");
 
             jQuery(".mobile__menu").removeClass("is__opened").fadeOut();
@@ -94,7 +94,7 @@ jQuery(document).ready(function() {
         });
     }
 
-    var viewDetail = jQuery(".view__detail-link"),
+    const viewDetail = jQuery(".view__detail-link"),
         viewDetailPopup = jQuery("#view__detail-popup"),
         popupBg = jQuery(".popup__show-bg");
     if(viewDetail.length) {
@@ -123,18 +123,19 @@ jQuery(document).ready(function() {
         'albumLabel': 'Изображение %1 из %2'
     });
 
-    var sliderAboutAs = jQuery('.slider__about-us');
+    const sliderAboutAs = jQuery('.slider__about-us');
     if (sliderAboutAs.length) {
         sliderAboutAs.owlCarousel({
             loop:false,
             margin:5,
-            nav:false,
+            nav:true,
             dots:false,
-            items:1
+            items:1,
+            navText: ['','']
         });
-        var navs = jQuery('.slider__about-us-nav');
+        const navs = jQuery('.slider__about-us-nav');
         navs.on("click", "div[data-target]", function () {
-            var _this= jQuery(this),
+            const _this = jQuery(this),
                 pos = parseInt(_this.attr("data-target"));
 
             navs.find("div[data-target]").removeClass("active");
@@ -144,11 +145,11 @@ jQuery(document).ready(function() {
         });
     }
 
-    var callPopup = jQuery(".call__popup");
+    const callPopup = jQuery(".call__popup");
     if(callPopup.length) {
         callPopup.on("click", function (e) {
             e.preventDefault();
-            var _this = jQuery(this),
+            const _this = jQuery(this),
                 popup = jQuery("#" + _this.attr("data-target"));
 
             return popup.fadeIn() && popupBg.show();
@@ -163,13 +164,13 @@ jQuery(document).ready(function() {
     |   notification
     |-----------------------------------------------------------
     */
-    var Notification = {
+    const Notification = {
         element: false,
         setElement: function (element) {
             return this.element = element;
         },
         notify: function (message) {
-            if( ! this.element) {
+            if (!this.element) {
                 this.setElement(jQuery(".notify"));
             }
             return this.element.html('<div>' + message + '</div>') && this.element.fadeIn().delay(7000).fadeOut();
@@ -178,6 +179,36 @@ jQuery(document).ready(function() {
 
     formHandler("#form__callback", Notification);
     formHandler("#form__consultation", Notification);
+
+    //youtube
+    const youtube = document.querySelectorAll(".youtube-box");
+
+    const yLength = youtube.length;
+    if(yLength) {
+        for (let i = 0; i < yLength; i++) {
+
+            const source = "https://img.youtube.com/vi/" + youtube[i].dataset.embed + "/sddefault.jpg";
+
+            const image = new Image();
+            image.src = source;
+            image.addEventListener( "load", function() {
+                return youtube[ i ].appendChild( image );
+            }(i));
+
+            youtube[i].addEventListener( "click", function() {
+
+                const iframe = document.createElement("iframe");
+
+                iframe.setAttribute("frameborder", "0");
+                iframe.setAttribute("allowfullscreen", "");
+                iframe.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+                iframe.setAttribute("src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1");
+
+                this.innerHTML = "";
+                this.appendChild(iframe);
+            });
+        }
+    }
 });
 
 jQuery.ajaxSetup({
@@ -189,7 +220,7 @@ jQuery.ajaxSetup({
 function formHandler(selector, Notification) {
     return jQuery(document).on("submit", selector, function(e){
         e.preventDefault();
-        var _this = jQuery(this),
+        const _this = jQuery(this),
             url = _this.attr('action'),
             data = _this.serialize(),
             submitBlock = _this.find(".submit"),
@@ -217,7 +248,7 @@ function formHandler(selector, Notification) {
 }
 function startCarouselDM()
 {
-    var detailCarousel = jQuery('.view__detail-carousel');
+    const detailCarousel = jQuery('.view__detail-carousel');
     if (detailCarousel.length) {
         detailCarousel.owlCarousel({
             loop:false,

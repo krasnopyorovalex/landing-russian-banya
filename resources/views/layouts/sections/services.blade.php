@@ -1,38 +1,38 @@
-<section class="default" id="services__section">
+<section class="default" id="typical_services">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="title">Наши услуги</div>
+                <div class="title decoration">Типовые решения</div>
             </div>
         </div>
         <div class="row">
-            <div class="row col-12">
-                <div class="col-12 owl-carousel owl-theme default__slider">
-                    @foreach($services as $service)
-                    <div>
-                        @if ($service->image)
-                            <div class="rooms__slider-img">
-                                <img src="{{ $service->image->path }}" alt="{{ $service->image->alt }}" title="{{ $service->image->title }}">
-                            </div>
-                        @endif
-                        <div class="caption">
-                            <div class="caption__name">
-                                <div>{{ $service->name }}</div>
-                            </div>
-                            <div class="caption__text">
-                                {!! $service->preview !!}
-                            </div>
-                            <div class="caption__btn">
-                                <div data-link="{{ route('service.show', $service) }}" class="btn view__detail-link">Детали</div>
-                            </div>
+            @foreach($services as $service)
+                <div class="col-3">
+                    @if ($service->image)
+                        <div class="rooms__slider-img">
+                            <img src="{{ $service->image->path }}" alt="{{ $service->image->alt }}" title="{{ $service->image->title }}">
                         </div>
+                    @else
+                        <div class="rooms__slider-img">
+                            <img src="{{ asset('images/test.jpeg') }}" />
+                        </div>
+                    @endif
+                    <div class="caption">
+                        <div class="caption__name">
+                            <div>{{ $service->name }}</div>
+                        </div>
+                        {{--                            <div class="caption__text">--}}
+                        {{--                                {!! $service->preview !!}--}}
+                        {{--                            </div>--}}
+
                     </div>
-                    @endforeach
                 </div>
-            </div>
+            @endforeach
             <div class="col-12">
                 <div class="text">
-                    {!! $textBlocks->get('services_text') !!}
+                    <div data-link="#" class="btn call__popup" data-target="popup__consultation">
+                        Заказать бесплатную консультацию
+                    </div>
                 </div>
             </div>
         </div>

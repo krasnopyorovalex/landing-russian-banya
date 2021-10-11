@@ -18,6 +18,7 @@ Auth::routes();
 Route::post('send-recall', 'FormHandlerController@recall')->name('send.recall');
 Route::post('send-callback', 'FormHandlerController@callback')->name('send.callback');
 Route::post('send-calculate', 'FormHandlerController@calculate')->name('send.calculate');
+Route::post('send-consultation', 'FormHandlerController@consultation')->name('send.consultation');
 
 Route::group(['middleware' => ['redirector']], static function () {
 

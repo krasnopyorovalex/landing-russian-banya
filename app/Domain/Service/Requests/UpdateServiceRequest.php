@@ -10,12 +10,12 @@ use App\Http\Requests\Request;
  */
 class UpdateServiceRequest extends Request
 {
-    public function rules()
+    public function rules(): array
     {
         return [
             'name' => 'bail|required|max:512',
-            'text' => 'required|string',
-            'preview' => 'required|string',
+            'text' => 'string',
+            'preview' => 'string',
             'image' => 'image',
             'imageAlt' => 'string|max:255',
             'imageTitle' => 'string|max:255'

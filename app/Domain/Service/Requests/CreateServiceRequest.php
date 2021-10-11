@@ -10,12 +10,12 @@ use App\Http\Requests\Request;
  */
 class CreateServiceRequest extends Request
 {
-    public function rules()
+    public function rules(): array
     {
         return [
             'name' => 'bail|required|max:512',
-            'text' => 'required|string',
-            'preview' => 'required|string',
+            'text' => 'string|nullable',
+            'preview' => 'string|nullable',
             'image' => 'image',
         ];
     }
