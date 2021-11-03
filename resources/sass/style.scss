@@ -993,7 +993,13 @@ html.lb-disable-scrolling {
       margin: 0 .3rem 0 0;
     }
     > a:last-child {
-      margin: 0 0 0 .1rem;
+      margin: 0 0 0 .2rem;
+    }
+    img {
+      width: 25px;
+      height: auto;
+      display: inline-block;
+      vertical-align: middle;
     }
     a {
       display: inline-block;
@@ -1057,14 +1063,17 @@ html.lb-disable-scrolling {
   img {
     max-width: 200px;
     display: block;
-    margin: 0 auto;
+    //margin: 0 auto;
   }
+}
+.text-center {
+  text-align: center;
 }
 .header {
   color: #fff;
   height: 100vh;
   min-height: 560px;
-  background-image: url(../img/61087b-min.jpg);
+  background-image: url(../img/bg-first-screen.jpeg);
   background-color: rgba(0,0,0,.4);
   background-blend-mode: darken;
   background-repeat: no-repeat;
@@ -1117,14 +1126,14 @@ html.lb-disable-scrolling {
       font-size: 2.8125rem;
       letter-spacing: 1px;
       font-family: 'Trebuchet MS';
-      text-align: left;
+      text-align: center;
       display: block;
       span {
         font-weight: 700;
       }
     }
     .sub__title {
-      text-align: left;
+      text-align: center;
       font-family: 'Trebuchet MS';
       text-shadow: 0 0 50px rgba(0,0,0,.4);
       font-size: 1.375rem;

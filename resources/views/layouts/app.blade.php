@@ -19,31 +19,26 @@
     <nav id="nav__menu">
         <div class="container">
             <div class="row">
-                <div class="col-4"></div>
                 <div class="col-4">
                     <div class="logo">
                         <a href="{{ route('page.show') }}">
-                            <img src="{{ asset('images/logo.svg') }}" alt="" title="">
+                            <img src="{{ asset('images/logo-white.svg') }}" alt="" title="">
                         </a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-3"></div>
+                <div class="col-5">
                     <div class="right flex__box">
                         <div class="phone">
-                            <a href="tel:+79785069240">
-                                +7 (978) 506-92-40
+                            <a href="https://wa.me/79787847093" class="t-msg">
+                                <img src="{{ asset('images/whatsapp.png') }}" alt="">
                             </a>
-                            <a href="https://wa.me/79785069240" class="t-msg">
-                                <svg class="icon__whatsapp">
-                                    <use xlink:href="{{ asset('img/symbols.svg#whatsapp') }}"></use>
-                                </svg>
+                            <a href="viber://add?number=79787847093" class="t-msg">
+                                <img src="{{ asset('images/viber.png') }}" alt="">
                             </a>
-                            <a href="viber://add?number=79785069240" class="t-msg">
-                                <svg class="icon__viber">
-                                    <use xlink:href="{{ asset('img/symbols.svg#viber') }}"></use>
-                                </svg>
+                            <a href="tel:+7 (978) 784 70 93">
+                                +7 (978) 784 70 93
                             </a>
-
                         </div>
                         <div class="btn btn__booking call__popup" data-target="popup__recall">
                             Заказать звонок

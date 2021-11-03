@@ -1258,7 +1258,14 @@ html.lb-disable-scrolling {
 }
 
 #nav__menu .phone > a:last-child {
-  margin: 0 0 0 .1rem;
+  margin: 0 0 0 .2rem;
+}
+
+#nav__menu .phone img {
+  width: 25px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #nav__menu .phone a {
@@ -1336,14 +1343,17 @@ html.lb-disable-scrolling {
 .logo img {
   max-width: 200px;
   display: block;
-  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .header {
   color: #fff;
   height: 100vh;
   min-height: 560px;
-  background-image: url(/images/61087b-min.jpg?24fa8082b96b7c1568f439ccbe43350c);
+  background-image: url(/images/bg-first-screen.jpeg?cdaa5a4e49355353f99be1e46f4fdb90);
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: darken;
   background-repeat: no-repeat;
@@ -1409,7 +1419,7 @@ html.lb-disable-scrolling {
   font-size: 2.8125rem;
   letter-spacing: 1px;
   font-family: 'Trebuchet MS';
-  text-align: left;
+  text-align: center;
   display: block;
 }
 
@@ -1418,7 +1428,7 @@ html.lb-disable-scrolling {
 }
 
 .header .intro__text .sub__title {
-  text-align: left;
+  text-align: center;
   font-family: 'Trebuchet MS';
   text-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
   font-size: 1.375rem;

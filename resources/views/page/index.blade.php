@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="title decoration">6 проблем со строительством бань</div>
+                        <div class="title decoration">4 основные проблемы при строительстве бани</div>
                     </div>
                 </div>
                 <div class="row">
@@ -38,6 +38,15 @@
                             </div>
                         </div>
                     @endforeach
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text">
+                            <div data-link="#" class="btn call__popup" data-target="popup__consultation">
+                                Заказать бесплатную консультацию
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -116,18 +125,23 @@
         <section class="youtube">
             <div class="container">
                 <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="title decoration">Видео-обзоры выполненных работ</div>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-4">
-                        <div class="youtube-box" data-embed="qiyU-ZttSvs">
+                        <div class="youtube-box" data-embed="5S4lgUjSHUs">
                             <div class="btn-play"></div>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="youtube-box" data-embed="uSMJyW_4f2Y">
+                        <div class="youtube-box" data-embed="hNS4cYBF6q8">
                             <div class="btn-play"></div>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="youtube-box" data-embed="DnqNnciTCyc">
+                        <div class="youtube-box" data-embed="dbvyTWsCaDM">
                             <div class="btn-play"></div>
                         </div>
                     </div>
@@ -142,7 +156,37 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="youtube-box" data-embed="rtLRY_762mg">
+                        <div class="youtube-box" data-embed="bklKNNONAu0">
+                            <div class="btn-play"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="youtube-box" data-embed="qiyU-ZttSvs">
+                            <div class="btn-play"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="youtube-box" data-embed="_hIRIQficTE">
+                            <div class="btn-play"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="youtube-box" data-embed="ZehhTdXVnJU">
+                            <div class="btn-play"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="youtube-box" data-embed="-F7tKcTVD1Q">
+                            <div class="btn-play"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="youtube-box" data-embed="MHcSt0kVLr8">
+                            <div class="btn-play"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="youtube-box" data-embed="uSMJyW_4f2Y">
                             <div class="btn-play"></div>
                         </div>
                     </div>

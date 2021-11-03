@@ -28,13 +28,6 @@
                     </div>
                 </div>
             @endforeach
-            <div class="col-12">
-                <div class="text">
-                    <div data-link="#" class="btn call__popup" data-target="popup__consultation">
-                        Заказать бесплатную консультацию
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
