@@ -200,7 +200,7 @@
         @includeWhen(count($faqs), 'layouts.sections.faqs')
 
         <section class="map__section" id="contacts__section">
-            <div id="map-yandex"></div>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A541a3a0e25d4f57ab1b41f3f6cdf37c1580084e00cb2d2b4d7a1b095bc04bec4&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
         </section>
     </main>
 
