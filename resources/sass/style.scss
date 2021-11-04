@@ -221,6 +221,14 @@ footer {
   }
   .footer__socials {
     text-align: right;
+    img {
+      width: 25px;
+      height: auto;
+      &.icon-youtube {
+        width: 35px;
+        margin: 0 0 0 5px;
+      }
+    }
     .icon {
       width: 18px;
       height: 18px;

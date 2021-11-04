@@ -14,12 +14,8 @@
 {{--    </svg>--}}
 {{--</a>--}}
 <a href="https://instagram.com/fabrikabani_sev?igshid=8ofb61cmbv8v" target="_blank" rel="noopener noreferrer">
-    <svg class="icon">
-        <use xlink:href="{{ asset('img/symbols.svg#insta') }}"></use>
-    </svg>
+    <img src="{{ asset('images/instagram.png') }}" alt="instagram" />
 </a>
-<a href="https://instagram.com/fabrikabani_sev?igshid=8ofb61cmbv8v" target="_blank" rel="noopener noreferrer">
-    <svg class="icon">
-        <use xlink:href="{{ asset('img/symbols.svg#youtube') }}"></use>
-    </svg>
+<a href="https://www.youtube.com/channel/UCipnfNq3AluyL5QSqDaEggw" target="_blank" rel="noopener noreferrer">
+    <img src="{{ asset('images/youtube.png') }}" alt="youtube" class="icon-youtube" />
 </a>

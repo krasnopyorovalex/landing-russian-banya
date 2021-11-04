@@ -36,16 +36,16 @@
                             <a href="viber://add?number=79787847093" class="t-msg">
                                 <img src="{{ asset('images/viber.png') }}" alt="">
                             </a>
-                            <a href="tel:+7 (978) 784 70 93">
-                                +7 (978) 784 70 93
+                            <a href="tel:+79787847093">
+                                +7 (978) 784-70-93
                             </a>
                         </div>
                         <div class="btn btn__booking call__popup" data-target="popup__recall">
                             Заказать звонок
                         </div>
-                        <div class="burger-mob">
-                            <span></span>
-                        </div>
+{{--                        <div class="burger-mob">--}}
+{{--                            <span></span>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                             <div>От команды профессионалов с опытом более 10 лет</div>
                             <div>Более 300 довольных клиентов</div>
                         </div>
-                        <div class="h-btn-box">
+                        <div class="h-btn-box text-center">
                             <div class="btn btn-scroll call__popup" data-target="popup__consultation">Заказать 3 бесплатных варианта</div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                             <svg class="icon">
                                 <use xlink:href="{{ asset('img/symbols.svg#phone') }}"></use>
                             </svg>
-                            <a href="tel:+79789125067">8 (978) 912-50-67</a>
+                            <a href="tel:+79787847093">+7 (978) 784-70-93</a>
                         </div>
                         <div>
                             <svg class="icon">
