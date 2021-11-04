@@ -10,11 +10,14 @@
                 <div class="col-3">
                     @if ($service->image)
                         <div class="rooms__slider-img">
-                            <img src="{{ $service->image->path }}" alt="{{ $service->image->alt }}" title="{{ $service->image->title }}">
-                        </div>
-                    @else
-                        <div class="rooms__slider-img">
-                            <img src="{{ asset('images/test.jpeg') }}" />
+                            <a href="{{ $service->image->path }}" data-lightbox="service-img-{{ $service->id }}" data-title="{{ $service->name }}">
+                                <img src="{{ $service->image->path }}" alt="{{ $service->image->alt }}" title="{{ $service->image->title }}">
+                            </a>
+                            @if($service->images)
+                                @foreach($service->images as $sImg)
+                                    <a href="{{ $sImg->getPath() }}" class="hidden" data-lightbox="service-img-{{ $service->id }}" data-title="{{ $sImg->name }}">&nbsp;</a>
+                                @endforeach
+                            @endif
                         </div>
                     @endif
                     <div class="caption">

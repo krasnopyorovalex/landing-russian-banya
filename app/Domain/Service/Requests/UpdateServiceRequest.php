@@ -16,7 +16,7 @@ class UpdateServiceRequest extends Request
             'name' => 'bail|required|max:512',
             'text' => 'string',
             'preview' => 'string',
-            'image' => 'image',
+            //'image' => 'image',
             'imageAlt' => 'string|max:255',
             'imageTitle' => 'string|max:255'
         ];

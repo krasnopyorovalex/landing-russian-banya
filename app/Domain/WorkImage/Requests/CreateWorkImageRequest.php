@@ -13,7 +13,7 @@ class CreateWorkImageRequest extends Request
     public function rules()
     {
         return [
-            'upload' => 'image',
+//            'upload' => 'image',
             'gallery_id' => 'integer'
         ];
     }

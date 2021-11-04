@@ -1,14 +1,14 @@
 @extends('layouts.admin')
 
 @section('breadcrumb')
-    <li><a href="{{ route('admin.works.index') }}">Наши работы</a></li>
-    <li class="active">Форма редактирования нашей работы</li>
+    <li><a href="{{ route('admin.works.index') }}">Проблемы при строительстве</a></li>
+    <li class="active">Форма редактирования</li>
 @endsection
 
 @section('content')
 
     <div class="panel panel-default">
-        <div class="panel-heading">Форма редактирования нашей работы</div>
+        <div class="panel-heading">Форма редактирования</div>
 
         <div class="panel-body">
 
@@ -27,8 +27,8 @@
                             @method('put')
 
                             @input(['name' => 'name', 'label' => 'Название', 'entity' => $work])
-                            @textarea(['name' => 'preview', 'label' => 'Превью статьи', 'id' => 'editor-full2', 'entity' => $work])
-                            @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $work])
+{{--                            @textarea(['name' => 'preview', 'label' => 'Превью статьи', 'id' => 'editor-full2', 'entity' => $work])--}}
+{{--                            @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $work])--}}
 
                             @input(['name' => 'pos', 'label' => 'Позиция', 'entity' => $work])
 

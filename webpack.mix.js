@@ -11,12 +11,12 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.scripts([
+mix.babel([
         'resources/js/_jquery.mask.js',
         'resources/js/_jquery.scrollTo.min.js',
         'resources/js/_lightbox.min.js',
         'resources/js/_owl.carousel.min.js',
-        'resources/js/app.js',
+        'resources/js/app.js'
     ], 'public/js/app.min.js')
     .sass('resources/sass/style.scss', 'public/css')
     .version();

@@ -1,14 +1,14 @@
 @extends('layouts.admin')
 
 @section('breadcrumb')
-    <li><a href="{{ route('admin.works.index') }}">Наши работы</a></li>
-    <li class="active">Форма добавления нашей работы</li>
+    <li><a href="{{ route('admin.works.index') }}">Проблемы при строительстве</a></li>
+    <li class="active">Форма добавления</li>
 @endsection
 
 @section('content')
 
     <div class="panel panel-default">
-        <div class="panel-heading">Форма добавления нашей работы</div>
+        <div class="panel-heading">Форма добавления</div>
             <div class="panel-body">
 
                 @include('layouts.partials.errors')
@@ -25,8 +25,8 @@
 
                                 @input(['name' => 'name', 'label' => 'Название'])
                                 @imageInput(['name' => 'image', 'type' => 'file', 'label' => 'Выберите изображение на компьютере'])
-                                @textarea(['name' => 'preview', 'label' => 'Превью услуги', 'id' => 'editor-full2'])
-                                @textarea(['name' => 'text', 'label' => 'Текст'])
+{{--                                @textarea(['name' => 'preview', 'label' => 'Превью услуги', 'id' => 'editor-full2'])--}}
+{{--                                @textarea(['name' => 'text', 'label' => 'Текст'])--}}
 
                                 @submit_btn()
                             </form>

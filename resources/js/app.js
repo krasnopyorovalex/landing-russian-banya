@@ -209,6 +209,64 @@ jQuery(document).ready(function() {
             });
         }
     }
+
+    let loaded = false;
+    const halfHeightDocument = $(document).height() / 3;
+
+    const ymapFn = function () {
+        jQuery(window).scroll(function () {
+                if (!loaded && window.pageYOffset >= halfHeightDocument) {
+                    loaded = true;
+                    loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function () {
+                        ymaps.load(init);
+                    });
+                }
+            }
+        );
+    };
+
+    function init () {
+        if(!$("#map-yandex").length) {
+            return false;
+        }
+
+        const myMapTemp = new ymaps.Map("map-yandex", {
+            center: [44.581759, 33.484082],
+            zoom: 17,
+            controls: ['zoomControl', 'fullscreenControl']
+        });
+        const myPlacemarkTemp = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: [44.581759, 33.484082]
+            }
+        });
+        myMapTemp.geoObjects.add(myPlacemarkTemp);
+        myMapTemp.layers.get(0).get(0);
+    }
+
+    function loadScript(url, callback){
+        const script = document.createElement("script");
+
+        if (script.readyState){
+            script.onreadystatechange = function(){
+                if (script.readyState === "loaded" ||
+                    script.readyState === "complete"){
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {
+            script.onload = function(){
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+    ymapFn();
 });
 
 jQuery.ajaxSetup({

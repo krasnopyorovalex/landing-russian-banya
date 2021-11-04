@@ -16,7 +16,7 @@ class CreateServiceRequest extends Request
             'name' => 'bail|required|max:512',
             'text' => 'string|nullable',
             'preview' => 'string|nullable',
-            'image' => 'image',
+            //'image' => 'image',
         ];
     }
 

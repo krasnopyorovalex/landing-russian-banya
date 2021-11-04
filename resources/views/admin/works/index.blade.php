@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('breadcrumb')
-    <li class="active">Наши работы</li>
+    <li class="active">Проблемы при строительстве</li>
 @endsection
 
 @section('content')

@@ -16,23 +16,24 @@
                     </div>
                 </div>
                 <div class="row">
-                    @foreach($services as $service)
+                    @foreach($works as $work)
                         <div class="col-3">
-                            @if ($service->image)
+                            @if ($work->image)
                                 <div class="rooms__slider-img">
-                                    <img src="{{ $service->image->path }}" alt="{{ $service->image->alt }}" title="{{ $service->image->title }}">
-                                </div>
-                            @else
-                                <div class="rooms__slider-img">
-                                    <img src="{{ asset('images/test.jpeg') }}" />
+                                    <img src="{{ $work->image->path }}" alt="{{ $work->image->alt }}" title="{{ $work->image->title }}" />
+                                    @if($work->images)
+                                        @foreach($work->images as $wImg)
+                                            <a href="{{ $wImg->getPath() }}" class="hidden" data-lightbox="problems" data-title="{{ $wImg->name }}">&nbsp;</a>
+                                        @endforeach
+                                    @endif
                                 </div>
                             @endif
                             <div class="caption">
                                 <div class="caption__name">
-                                    <div>{{ $service->name }}</div>
+                                    <div>{{ $work->name }}</div>
                                 </div>
                                 {{--                            <div class="caption__text">--}}
-                                {{--                                {!! $service->preview !!}--}}
+                                {{--                                {!! $work->preview !!}--}}
                                 {{--                            </div>--}}
 
                             </div>
@@ -199,9 +200,7 @@
         @includeWhen(count($faqs), 'layouts.sections.faqs')
 
         <section class="map__section" id="contacts__section">
-            <div>
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac4db9bb6e87fa6d628253543b41ef61b3a8bde8c8d8cd63bca063905416cf583&amp;source=constructor&amp;scroll=false" width="100%" height="485" frameborder="0"></iframe>
-            </div>
+            <div id="map-yandex"></div>
         </section>
     </main>
 

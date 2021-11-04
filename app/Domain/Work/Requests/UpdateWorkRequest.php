@@ -14,9 +14,9 @@ class UpdateWorkRequest extends Request
     {
         return [
             'name' => 'bail|required|max:512',
-            'text' => 'required|string',
-            'preview' => 'required|string',
-            'image' => 'image',
+            'text' => 'nullable|string',
+            'preview' => 'nullable|string',
+//            'image' => 'image',
             'imageAlt' => 'string|max:255',
             'imageTitle' => 'string|max:255'
         ];
