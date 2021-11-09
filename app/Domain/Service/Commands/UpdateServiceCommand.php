@@ -7,6 +7,7 @@ use App\Domain\Image\Commands\UploadImageCommand;
 use App\Domain\Service\Queries\GetServiceByIdQuery;
 use App\Http\Requests\Request;
 use App\Service;
+use App\Services\UploadImagesService;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
 /**
@@ -20,16 +21,18 @@ class UpdateServiceCommand
 
     private $request;
     private $id;
+    private UploadImagesService $imagesService;
 
     /**
      * UpdateServiceCommand constructor.
      * @param int $id
      * @param Request $request
      */
-    public function __construct(int $id, Request $request)
+    public function __construct(int $id, Request $request, UploadImagesService $imagesService)
     {
         $this->id = $id;
         $this->request = $request;
+        $this->imagesService = $imagesService;
     }
 
     /**
@@ -44,9 +47,11 @@ class UpdateServiceCommand
                 $this->dispatch(new DeleteImageCommand($service->image));
             }
             $this->dispatch(new UploadImageCommand($this->request, $service->id, Service::class));
+            $service->refresh();
+            $this->imagesService->createDesktopImage($service->image->path, 274, 366);
         }
 
-        return $service->update($this->request->all());
+        return $service->update($this->request->validated());
     }
 
 }

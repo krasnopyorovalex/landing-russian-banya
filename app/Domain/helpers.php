@@ -106,3 +106,13 @@ if (! function_exists('add_css_class')) {
         return count($classes) ? ' class="'. implode(' ', $classes) .'"' : '';
     }
 }
+
+if (! function_exists('filename_replacer')) {
+    function filename_replacer(string $path, string $postfix): string
+    {
+        $fileName = pathinfo($path, PATHINFO_FILENAME);
+        $replaceName = sprintf('%s_%s', $fileName, $postfix);
+
+        return str_replace($fileName, $replaceName, $path);
+    }
+}

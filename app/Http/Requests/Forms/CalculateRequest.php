@@ -14,10 +14,6 @@ class CalculateRequest extends Request
     public function rules(): array
     {
         return [
-            'estate-type' => ['required', 'string'],
-            'address' => ['required', 'string', new NotUrl()],
-            'square' => ['required', 'string', new NotUrl()],
-            'cost' => ['required', 'string', new NotUrl()],
             'name' => ['required', 'string', 'min:2', 'regex:/[А-Яа-яЁё]/u', new NotUrl()],
             'phone' => ['required', 'string']
         ];

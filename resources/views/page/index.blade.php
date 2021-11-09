@@ -20,7 +20,9 @@
                         <div class="col-3">
                             @if ($work->image)
                                 <div class="rooms__slider-img">
-                                    <img src="{{ $work->image->path }}" alt="{{ $work->image->alt }}" title="{{ $work->image->title }}" />
+                                    <a href="{{ $work->image->path }}" data-lightbox="service-img-{{ $work->id }}" data-title="{{ $work->name }}">
+                                        <img src="{{ filename_replacer($work->image->path, '_desktop') }}" alt="{{ $work->image->alt }}" title="{{ $work->image->title }}" />
+                                    </a>
                                     @if($work->images)
                                         @foreach($work->images as $wImg)
                                             <a href="{{ $wImg->getPath() }}" class="hidden" data-lightbox="problems" data-title="{{ $wImg->name }}">&nbsp;</a>
@@ -117,7 +119,7 @@
                             <div class="step">06</div>
                             <img src="/img/step-06.png" alt="s">
                         </div>
-                        <div class="step-name">Довольный клиентов</div>
+                        <div class="step-name">Довольный клиент</div>
                     </div>
                 </div>
             </div>

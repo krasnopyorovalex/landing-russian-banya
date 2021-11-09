@@ -67,7 +67,24 @@
                             <div>Более 300 довольных клиентов</div>
                         </div>
                         <div class="h-btn-box text-center">
-                            <div class="btn btn-scroll call__popup" data-target="popup__consultation">Заказать 3 бесплатных варианта</div>
+                            <form action="{{ route('send.calculate') }}" method="post" class="form__order" id="form__calculate">
+                                @csrf
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="single__block">
+                                            <input type="text" name="name" value="" placeholder="Ваше имя" required autocomplete="off" minlength="2" />
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="single__block">
+                                            <input type="text" name="phone" value="" required autocomplete="off" class="phone__mask" maxlength="18" />
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="submit" class="btn btn-scroll">Заказать 3 бесплатных варианта</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

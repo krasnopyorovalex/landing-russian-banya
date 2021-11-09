@@ -6,6 +6,7 @@ use App\Domain\Image\Commands\DeleteImageCommand;
 use App\Domain\Image\Commands\UploadImageCommand;
 use App\Domain\Work\Queries\GetWorkByIdQuery;
 use App\Http\Requests\Request;
+use App\Services\UploadImagesService;
 use App\Work;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
@@ -20,16 +21,18 @@ class UpdateWorkCommand
 
     private $request;
     private $id;
+    private UploadImagesService $imagesService;
 
     /**
      * UpdateWorkCommand constructor.
      * @param int $id
      * @param Request $request
      */
-    public function __construct(int $id, Request $request)
+    public function __construct(int $id, Request $request, UploadImagesService $imagesService)
     {
         $this->id = $id;
         $this->request = $request;
+        $this->imagesService = $imagesService;
     }
 
     /**
@@ -37,16 +40,18 @@ class UpdateWorkCommand
      */
     public function handle(): bool
     {
-        $Work = $this->dispatch(new GetWorkByIdQuery($this->id));
+        $work = $this->dispatch(new GetWorkByIdQuery($this->id));
 
         if ($this->request->has('image')) {
-            if ($Work->image) {
-                $this->dispatch(new DeleteImageCommand($Work->image));
+            if ($work->image) {
+                $this->dispatch(new DeleteImageCommand($work->image));
             }
-            $this->dispatch(new UploadImageCommand($this->request, $Work->id, Work::class));
+            $this->dispatch(new UploadImageCommand($this->request, $work->id, Work::class));
+            $work->refresh();
+            $this->imagesService->createDesktopImage($work->image->path, 274, 366);
         }
 
-        return $Work->update($this->request->all());
+        return $work->update($this->request->validated());
     }
 
 }

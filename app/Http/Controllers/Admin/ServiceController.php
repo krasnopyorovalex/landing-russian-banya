@@ -8,6 +8,7 @@ use App\Domain\Service\Commands\UpdateServiceCommand;
 use App\Domain\Service\Queries\GetAllServicesQuery;
 use App\Domain\Service\Queries\GetServiceByIdQuery;
 use App\Http\Controllers\Controller;
+use App\Services\UploadImagesService;
 use Domain\Service\Requests\CreateServiceRequest;
 use Domain\Service\Requests\UpdateServiceRequest;
 
@@ -17,6 +18,16 @@ use Domain\Service\Requests\UpdateServiceRequest;
  */
 class ServiceController extends Controller
 {
+    /**
+     * @var UploadImagesService
+     */
+    private $imagesService;
+
+    public function __construct(UploadImagesService $imagesService)
+    {
+        $this->imagesService = $imagesService;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -49,7 +60,7 @@ class ServiceController extends Controller
      */
     public function store(CreateServiceRequest $request)
     {
-        $this->dispatch(new CreateServiceCommand($request));
+        $this->dispatch(new CreateServiceCommand($request, $this->imagesService));
 
         return redirect(route('admin.services.index'));
     }
@@ -76,7 +87,7 @@ class ServiceController extends Controller
      */
     public function update($id, UpdateServiceRequest $request)
     {
-        $this->dispatch(new UpdateServiceCommand($id, $request));
+        $this->dispatch(new UpdateServiceCommand($id, $request, $this->imagesService));
 
         return redirect(route('admin.services.index'));
     }

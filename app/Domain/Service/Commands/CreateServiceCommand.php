@@ -6,6 +6,7 @@ use App\Action;
 use App\Domain\Image\Commands\UploadImageCommand;
 use App\Http\Requests\Request;
 use App\Service;
+use App\Services\UploadImagesService;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
 /**
@@ -18,14 +19,16 @@ class CreateServiceCommand
     use DispatchesJobs;
 
     private $request;
+    private UploadImagesService $imagesService;
 
     /**
      * CreateServiceCommand constructor.
      * @param $request
      */
-    public function __construct(Request $request)
+    public function __construct(Request $request, UploadImagesService $imagesService)
     {
         $this->request = $request;
+        $this->imagesService = $imagesService;
     }
 
     /**
@@ -39,7 +42,8 @@ class CreateServiceCommand
         $service->save();
 
         if ($this->request->has('image')) {
-            return $this->dispatch(new UploadImageCommand($this->request, $service->id, Service::class));
+            $this->dispatch(new UploadImageCommand($this->request, $service->id, Service::class));
+            $this->imagesService->createDesktopImage($service->image->path, 274, 366);
         }
 
         return true;

@@ -11,7 +11,7 @@
                     @if ($service->image)
                         <div class="rooms__slider-img">
                             <a href="{{ $service->image->path }}" data-lightbox="service-img-{{ $service->id }}" data-title="{{ $service->name }}">
-                                <img src="{{ $service->image->path }}" alt="{{ $service->image->alt }}" title="{{ $service->image->title }}">
+                                <img src="{{ filename_replacer($service->image->path, '_desktop') }}" alt="{{ $service->image->alt }}" title="{{ $service->image->title }}">
                             </a>
                             @if($service->images)
                                 @foreach($service->images as $sImg)

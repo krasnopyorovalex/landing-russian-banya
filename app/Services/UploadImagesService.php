@@ -118,4 +118,14 @@ class UploadImagesService
             })
             ->save(public_path('storage/' . $this->entity . '/' . $this->entityId .'/' . $this->getImageHashName() . '_thumb.' . $this->getExt()));
     }
+
+    public function createDesktopImage(string $path, int $width, int $height)
+    {
+        $desktopImageName = filename_replacer($path, '_desktop');
+
+        (new ImageManager())
+            ->make(public_path($path))
+            ->fit($width, $height)
+            ->save(public_path($desktopImageName));
+    }
 }

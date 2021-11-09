@@ -8,6 +8,7 @@ use App\Domain\Work\Commands\UpdateWorkCommand;
 use App\Domain\Work\Queries\GetAllWorksQuery;
 use App\Domain\Work\Queries\GetWorkByIdQuery;
 use App\Http\Controllers\Controller;
+use App\Services\UploadImagesService;
 use Domain\Work\Requests\CreateWorkRequest;
 use Domain\Work\Requests\UpdateWorkRequest;
 
@@ -17,6 +18,13 @@ use Domain\Work\Requests\UpdateWorkRequest;
  */
 class WorkController extends Controller
 {
+    private UploadImagesService $imagesService;
+
+    public function __construct(UploadImagesService $imagesService)
+    {
+        $this->imagesService = $imagesService;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -49,7 +57,7 @@ class WorkController extends Controller
      */
     public function store(CreateWorkRequest $request)
     {
-        $this->dispatch(new CreateWorkCommand($request));
+        $this->dispatch(new CreateWorkCommand($request, $this->imagesService));
 
         return redirect(route('admin.works.index'));
     }
@@ -76,7 +84,7 @@ class WorkController extends Controller
      */
     public function update($id, UpdateWorkRequest $request)
     {
-        $this->dispatch(new UpdateWorkCommand($id, $request));
+        $this->dispatch(new UpdateWorkCommand($id, $request, $this->imagesService));
 
         return redirect(route('admin.works.index'));
     }

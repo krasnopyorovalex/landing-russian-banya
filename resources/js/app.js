@@ -179,6 +179,7 @@ jQuery(document).ready(function() {
 
     formHandler("#form__callback", Notification);
     formHandler("#form__consultation", Notification);
+    formHandler("#form__calculate", Notification);
 
     //youtube
     const youtube = document.querySelectorAll(".youtube-box");
