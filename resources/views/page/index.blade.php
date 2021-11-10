@@ -15,7 +15,7 @@
                         <div class="title decoration">4 основные проблемы при строительстве бани</div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row flex-start">
                     @foreach($works as $work)
                         <div class="col-3">
                             @if ($work->image)

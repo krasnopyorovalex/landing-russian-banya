@@ -207,6 +207,11 @@ figure {
   margin: 0;
   padding: 0;
 }
+#typical_services {
+  .col-3 {
+    margin-bottom: 1rem;
+  }
+}
 .intro__text {
   .form__order {
     margin: 10% 0 0 0;
@@ -2463,12 +2468,18 @@ html.lb-disable-scrolling {
 .btn__see-all {
   margin: 2em 0 1em 0;
 }
+.flex-start {
+  align-items: flex-start;
+}
 .rooms__slider-img {
   border-top: 1px solid #858585;
   border-right: 1px solid #858585;
   border-left: 1px solid #858585;
   margin: 0 5px;
   background-color: #fff;
+  .caption {
+    min-height: 280px;
+  }
 }
 .guest {
   text-align: center;
@@ -2938,7 +2949,7 @@ button {
     }
   }
   .header {
-    height: calc(100vh - 50px);
+    height: auto;
     text-align: center;
     .human__block {
       img {
@@ -3076,6 +3087,16 @@ button {
     overflow-y: auto;
     .title {
       font-size: 1.5rem;
+    }
+  }
+  .intro__text {
+    .form__order {
+      .single__block {
+        margin: 0 0 15px 0;
+      }
+      button[type=submit] {
+        font-size: .9rem;
+      }
     }
   }
 }

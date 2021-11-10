@@ -5,7 +5,7 @@
                 <div class="title decoration">Типовые решения</div>
             </div>
         </div>
-        <div class="row">
+        <div class="row flex-start">
             @foreach($services as $service)
                 <div class="col-3">
                     @if ($service->image)
