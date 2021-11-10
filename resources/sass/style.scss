@@ -2959,11 +2959,15 @@ button {
       }
     }
     .intro__text {
+      height: auto;
       .h-btn-box {
         text-align: left;
       }
       .title {
         font-size: 1.875rem;
+      }
+      .form__order {
+        margin: 10% 0;
       }
     }
   }
