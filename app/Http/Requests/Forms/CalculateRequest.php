@@ -14,7 +14,7 @@ class CalculateRequest extends Request
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'min:2', 'regex:/[А-Яа-яЁё]/u', new NotUrl()],
+            //'name' => ['required', 'string', 'min:2', 'regex:/[А-Яа-яЁё]/u', new NotUrl()],
             'phone' => ['required', 'string']
         ];
     }

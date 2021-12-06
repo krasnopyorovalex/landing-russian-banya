@@ -40,9 +40,9 @@
                                 +7 (978) 784-70-93
                             </a>
                         </div>
-                        <div class="btn btn__booking call__popup" data-target="popup__recall">
-                            Заказать звонок
-                        </div>
+{{--                        <div class="btn btn__booking call__popup" data-target="popup__recall">--}}
+{{--                            Заказать звонок--}}
+{{--                        </div>--}}
 {{--                        <div class="burger-mob">--}}
 {{--                            <span></span>--}}
 {{--                        </div>--}}
@@ -55,7 +55,7 @@
     <header class="header">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-8">
                     <div class="intro__text">
                         <div class="title">
                             <div>Строительство,</div>
@@ -66,22 +66,21 @@
                             <div>От команды профессионалов с опытом более 10 лет</div>
                             <div>Более 300 довольных клиентов</div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="intro__text">
                         <div class="h-btn-box text-center">
                             <form action="{{ route('send.calculate') }}" method="post" class="form__order" id="form__calculate">
                                 @csrf
                                 <div class="row">
-                                    <div class="col-4">
-                                        <div class="single__block">
-                                            <input type="text" name="name" value="" placeholder="Ваше имя" required autocomplete="off" minlength="2" />
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
+                                    <div class="col-12">
                                         <div class="single__block">
                                             <input type="text" name="phone" value="" required autocomplete="off" class="phone__mask" maxlength="18" />
                                         </div>
                                     </div>
-                                    <div class="col-4">
-                                        <button type="submit" class="btn btn-scroll">Заказать 3 бесплатных варианта</button>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-scroll">Заказать 3 бесплатных варианта просчёта</button>
                                     </div>
                                 </div>
                             </form>

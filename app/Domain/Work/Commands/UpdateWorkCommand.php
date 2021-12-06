@@ -48,7 +48,7 @@ class UpdateWorkCommand
             }
             $this->dispatch(new UploadImageCommand($this->request, $work->id, Work::class));
             $work->refresh();
-            $this->imagesService->createDesktopImage($work->image->path, 274, 366);
+            $this->imagesService->createDesktopImage($work->image->path, 274, 274);
         }
 
         return $work->update($this->request->validated());

@@ -43,7 +43,7 @@ class CreateWorkCommand
 
         if ($this->request->has('image')) {
             $this->dispatch(new UploadImageCommand($this->request, $work->id, Work::class));
-            $this->imagesService->createDesktopImage($work->image->path, 274, 366);
+            $this->imagesService->createDesktopImage($work->image->path, 274, 274);
         }
 
         return true;

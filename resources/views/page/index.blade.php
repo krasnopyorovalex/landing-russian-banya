@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="title decoration">4 основные проблемы при строительстве бани</div>
+                        <div class="title">4 основные проблемы при строительстве бани</div>
                     </div>
                 </div>
                 <div class="row flex-start">
@@ -75,7 +75,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="title decoration">Этапы работ</div>
+                        <div class="title">Этапы работ</div>
                     </div>
                 </div>
                 <div class="row">
@@ -129,7 +129,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <div class="title decoration">Видео-обзоры выполненных работ</div>
+                        <div class="title">Видео-обзоры выполненных работ</div>
                     </div>
                 </div>
                 <div class="row">

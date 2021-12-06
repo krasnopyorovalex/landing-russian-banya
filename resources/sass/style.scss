@@ -226,7 +226,14 @@ figure {
     button[type=submit] {
       margin: 0;
       font-size: 1.2rem;
-      padding: 9px 30px;
+      padding: 9px 15px;
+    }
+    .row {
+      .col-12 {
+        &:nth-child(n+2) {
+          margin-top: 1.5rem;
+        }
+      }
     }
     .single__block {
       margin: 0;
@@ -1033,6 +1040,7 @@ html.lb-disable-scrolling {
     }
     > a:last-child {
       margin: 0 0 0 .2rem;
+      font-size: 20px;
     }
     img {
       width: 25px;
@@ -2938,6 +2946,15 @@ button {
   }
 }
 @media screen and (max-width:576px) {
+  .problems {
+    .row {
+      .col-3 {
+        &:nth-child(n+2) {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
   .title {
     margin: 0 0 .5em 0;
   }
@@ -2960,6 +2977,7 @@ button {
     }
     .intro__text {
       height: auto;
+      margin: 12vh 0 0 0;
       .h-btn-box {
         text-align: left;
       }
@@ -2968,6 +2986,11 @@ button {
       }
       .form__order {
         margin: 10% 0;
+      }
+    }
+    .col-4 {
+      .intro__text {
+        margin: 3rem 0 0 0;
       }
     }
   }
@@ -3102,6 +3125,26 @@ button {
       }
       button[type=submit] {
         font-size: .9rem;
+      }
+    }
+  }
+  #nav__menu {
+    .row {
+      .col-5 {
+        width: 63%;
+        .flex__box {
+          margin: 0;
+          .phone {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+      .col-4{
+        width: 33%;
+      }
+      .col-3 {
+        display: none;
       }
     }
   }

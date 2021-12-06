@@ -48,7 +48,7 @@ class UpdateServiceCommand
             }
             $this->dispatch(new UploadImageCommand($this->request, $service->id, Service::class));
             $service->refresh();
-            $this->imagesService->createDesktopImage($service->image->path, 274, 366);
+            $this->imagesService->createDesktopImage($service->image->path, 274, 274);
         }
 
         return $service->update($this->request->validated());

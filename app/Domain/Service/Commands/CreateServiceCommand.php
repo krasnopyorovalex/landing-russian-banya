@@ -43,7 +43,7 @@ class CreateServiceCommand
 
         if ($this->request->has('image')) {
             $this->dispatch(new UploadImageCommand($this->request, $service->id, Service::class));
-            $this->imagesService->createDesktopImage($service->image->path, 274, 366);
+            $this->imagesService->createDesktopImage($service->image->path, 274, 274);
         }
 
         return true;

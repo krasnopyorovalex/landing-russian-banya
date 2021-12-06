@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="title decoration">Типовые решения</div>
+                <div class="title">Типовые решения строительства бань</div>
             </div>
         </div>
         <div class="row flex-start">
