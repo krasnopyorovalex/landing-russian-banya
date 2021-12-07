@@ -1051,6 +1051,7 @@ html.lb-disable-scrolling {
     }
     a {
       display: inline-block;
+      vertical-align: middle;
       &:hover {
         text-decoration: underline;
       }
