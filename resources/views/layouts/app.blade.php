@@ -30,14 +30,14 @@
                 <div class="col-5">
                     <div class="right flex__box">
                         <div class="phone">
-                            <a href="https://wa.me/79787847093" class="t-msg">
+                            <a href="https://wa.me/89789125067" class="t-msg">
                                 <img src="{{ asset('images/whatsapp.png') }}" alt="">
                             </a>
-                            <a href="viber://add?number=79787847093" class="t-msg">
+                            <a href="viber://add?number=89789125067" class="t-msg">
                                 <img src="{{ asset('images/viber.png') }}" alt="">
                             </a>
-                            <a href="tel:+79787847093">
-                                +7 (978) 784-70-93
+                            <a href="tel:89789125067">
+                                8 978 912-50-67
                             </a>
                         </div>
 {{--                        <div class="btn btn__booking call__popup" data-target="popup__recall">--}}
@@ -103,7 +103,7 @@
                             <svg class="icon">
                                 <use xlink:href="{{ asset('img/symbols.svg#phone') }}"></use>
                             </svg>
-                            <a href="tel:+79787847093">+7 (978) 784-70-93</a>
+                            <a href="tel:89789125067">8 978 912-50-67</a>
                         </div>
                         <div>
                             <svg class="icon">
@@ -115,7 +115,7 @@
                             <svg class="icon icon__address">
                                 <use xlink:href="{{ asset('img/symbols.svg#address') }}"></use>
                             </svg>
-                            Россия, Севастополь, Фиолентовское шоссе, 1А/3
+                            Россия, Севастополь, Фиолентовское шоссе, 1А/3(заезд со стороны Нова центра)
                         </div>
                     </div>
                 </div>
