@@ -60,11 +60,11 @@
                     <div class="col-4">
                         <div class="slider__about-us owl-carousel owl-theme">
                             <img src="{{ asset('img/director.jpg') }}" alt="">
-                            <img src="{{ asset('images/slider-01.jpg') }}" alt="">
-                            <img src="{{ asset('images/slider-02.jpg') }}" alt="">
-                            <img src="{{ asset('images/slider-03.jpg') }}" alt="">
-                            <img src="{{ asset('images/slider-04.jpg') }}" alt="">
-                            <img src="{{ asset('images/slider-05.jpg') }}" alt="">
+                            <img src="{{ asset('images/slider-01.jpeg') }}" alt="">
+                            <img src="{{ asset('images/slider-02.jpeg') }}" alt="">
+                            <img src="{{ asset('images/slider-03.jpeg') }}" alt="">
+                            <img src="{{ asset('images/slider-04.jpeg') }}" alt="">
+                            <img src="{{ asset('images/slider-05.jpeg') }}" alt="">
                         </div>
                     </div>
                     <div class="col-8">
