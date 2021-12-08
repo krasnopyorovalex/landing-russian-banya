@@ -30,7 +30,8 @@ class CalculateSent extends Mailable
      */
     public function build(): CalculateSent
     {
-        return $this->subject('Форма: заказ 3 бесплатных вариантов просчёта(bani-krym.ru)')
+        return $this->from('bani.crimea@yandex.ru')
+            ->subject('Форма: заказ 3 бесплатных вариантов просчёта(bani-krym.ru)')
             ->view('emails.calculate', [
                 'data' => $this->data
             ]);

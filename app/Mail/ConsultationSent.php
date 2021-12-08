@@ -30,7 +30,8 @@ class ConsultationSent extends Mailable
      */
     public function build(): ConsultationSent
     {
-        return $this->subject('Форма: Заказ бесплатной консультации')
+        return $this->from('bani.crimea@yandex.ru')
+            ->subject('Форма: Заказ бесплатной консультации')
             ->view('emails.consultation', [
                 'data' => $this->data
             ]);
