@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'admin@xn--80abeheinban2aebv9bq.xn--p1ai'),
-        'name' => env('MAIL_FROM_NAME', 'Банк недвижимости'),
+        'address' => env('MAIL_FROM_ADDRESS', 'admin@bani-krym.ru'),
+        'name' => env('MAIL_FROM_NAME', 'Фабрика бань'),
     ],
 
     /*
