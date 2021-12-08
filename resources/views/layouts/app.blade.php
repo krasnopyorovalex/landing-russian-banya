@@ -76,7 +76,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="single__block">
-                                            <input type="text" name="phone" value="" required autocomplete="off" maxlength="18" />
+                                            <input type="text" name="phone" value="" required autocomplete="off" maxlength="18" placeholder="Ваш номер телефона" />
                                         </div>
                                     </div>
                                     <div class="col-12">
