@@ -30,12 +30,12 @@
                 <div class="col-5">
                     <div class="right flex__box">
                         <div class="phone">
-                            <a href="https://wa.me/89789125067" class="t-msg">
-                                <img src="{{ asset('images/whatsapp.png') }}" alt="">
-                            </a>
-                            <a href="viber://add?number=89789125067" class="t-msg">
-                                <img src="{{ asset('images/viber.png') }}" alt="">
-                            </a>
+{{--                            <a href="https://wa.me/89789125067" class="t-msg">--}}
+{{--                                <img src="{{ asset('images/whatsapp.png') }}" alt="">--}}
+{{--                            </a>--}}
+{{--                            <a href="viber://add?number=89789125067" class="t-msg">--}}
+{{--                                <img src="{{ asset('images/viber.png') }}" alt="">--}}
+{{--                            </a>--}}
                             <a href="tel:89789125067">
                                 8 978 912-50-67
                             </a>
@@ -195,5 +195,20 @@
     <div class="popup__show-bg"></div><div class="loader__bg"></div><div class="notify"></div>
     <script src="{{ asset('js/jquery.3.3.1.min.js') }}"></script>
     <script src="{{ mix('js/app.min.js') }}"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(86829141, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/86829141" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

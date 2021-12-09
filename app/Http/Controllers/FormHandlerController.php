@@ -31,7 +31,7 @@ class FormHandlerController extends Controller
         Mail::to([$this->to])->send(new CallbackSent($request->all()));
 
         return [
-            'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время',
+            'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время.',
             'status' => 200
         ];
     }
@@ -45,7 +45,7 @@ class FormHandlerController extends Controller
         Mail::to([$this->to])->send(new RecallSent($request->validated()));
 
         return [
-            'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время',
+            'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время.',
             'status' => 200
         ];
     }
@@ -59,7 +59,7 @@ class FormHandlerController extends Controller
         Mail::to([$this->to])->send(new CalculateSent($request->validated()));
 
         return [
-            'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время',
+            'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время.',
             'status' => 200
         ];
     }
@@ -73,7 +73,7 @@ class FormHandlerController extends Controller
         Mail::to([$this->to])->send(new CalculateSent($request->validated()));
 
         return [
-            'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время',
+            'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время.',
             'status' => 200
         ];
     }

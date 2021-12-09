@@ -173,7 +173,7 @@ jQuery(document).ready(function() {
             if (!this.element) {
                 this.setElement(jQuery(".notify"));
             }
-            return this.element.html('<div>' + message + '</div>') && this.element.fadeIn().delay(7000).fadeOut();
+            return this.element.html('<div>' + message + '</div>') && this.element.fadeIn().delay(3000).fadeOut();
         }
     };
 
