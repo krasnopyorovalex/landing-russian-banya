@@ -2707,6 +2707,18 @@ button {
   }
 }
 @media screen and (max-width:992px) {
+  #typical_services {
+    .col-3 {
+      width: 48%;
+    }
+  }
+  .problems {
+    .row {
+      .col-3 {
+        width: 48%;
+      }
+    }
+  }
   .as__h1 {
     font-size: 1.5rem;
   }
@@ -2758,13 +2770,28 @@ button {
     }
   }
   #nav__menu {
-    [class*=col-] {
-      width: 98%;
-    }
     .logo {
       text-align: center;
       img {
         margin: 0 auto;
+      }
+    }
+    .row {
+      .col-5 {
+        width: 63%;
+        .flex__box {
+          margin: 0;
+          .phone {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+      .col-4{
+        width: 33%;
+      }
+      .col-3 {
+        display: none;
       }
     }
     .nav__menu-box {
